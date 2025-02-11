@@ -1,0 +1,95 @@
+.animacion1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: venir 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    
+}
+
+.animacion1:hover{
+
+    /*transform: scale(1.2) rotate(5deg);
+    transition: transform 0.5s, border-radius 0.5s, background-color 0.5s;
+    border-radius: 50%; */
+    background-color: red;
+    animation: ir 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+}
+
+.imagen{
+
+  width: 40%;
+  animation: entrada 3s ease;
+}
+
+h1{
+ 
+  animation: entrada 1s ease;
+}
+
+p{
+ 
+  animation: entradaDer 2s ease;
+}
+
+@keyframes ir {
+  0% {
+   
+            transform: scale(1.05);
+            
+  }
+  100% {
+    
+            transform: scale(1);
+            opacity: 1;
+            background-color: aqua;
+  }
+}
+  @keyframes venir {
+    0% {
+     
+              transform: scale(1.05);
+              opacity: 1;
+              background-color: aqua;
+    }
+    100% {
+      
+              transform: scale(1);
+              opacity: 0.5;
+    }
+  }
+
+  @keyframes entrada {
+    0% {
+     
+              
+              opacity: 0;
+              transform: translateX(-50px);
+              
+    }
+    100% {
+      
+              
+              opacity: 1;
+              transform: translateX(0);
+              
+    }
+  }
+
+  @keyframes entradaDer {
+    0% {
+     
+              
+              opacity: 0;
+              transform: translateX(50px);
+              
+    }
+    100% {
+      
+              
+              opacity: 1;
+              transform: translateX(0);
+              
+    }
+  }
+
