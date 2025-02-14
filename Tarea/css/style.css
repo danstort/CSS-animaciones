@@ -3,29 +3,80 @@ h1 {
 }
 
 .columna {
-  border: 1px solid #54595F;
   background-color: #f7f5f1;
+  animation: columnaBack 0.5s forwards;
 }
 
 .columna:hover {
-  border: 3px solid #e3004f;
-  border-radius: 3%;
-}
-.columna:hover .cabezeraColumna {
-  background-color: #e3004f;
-  color: white;
-  border-radius: 2.5%;
+  animation: ani1 0.5s forwards;
 }
 
 .cabezeraColumna {
   background-color: #54595F;
   color: white;
   padding-top: 1%;
-  padding-bottom: 0.007%;
   text-align: center;
+}
+.cabezeraColumna p {
+  padding-bottom: 4%;
 }
 
 .sin {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+.boton {
+  background-color: #54595F;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: inline-block;
+}
+.boton:hover {
+  background-color: #e3004f;
+}
+
+@keyframes ani1 {
+  0% {
+    border: 1px solid #54595F;
+    border-radius: 0;
+  }
+  100% {
+    border: 3px solid #e3004f;
+    border-radius: 3%;
+  }
+}
+@keyframes columnaBack {
+  0% {
+    border: 3px solid #e3004f;
+    border-radius: 3%;
+  }
+  100% {
+    border: 1px solid #54595F;
+    border-radius: 0;
+  }
+}
+.columna:hover .cabezeraColumna {
+  animation: ani2 0.5s forwards;
+}
+
+@keyframes ani2 {
+  0% {
+    background-color: #54595F;
+    color: white;
+    border-radius: 0;
+  }
+  100% {
+    background-color: #e3004f;
+    color: white;
+    border-radius: 2.5%;
+  }
 }/*# sourceMappingURL=style.css.map */
