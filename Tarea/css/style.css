@@ -3,13 +3,29 @@ h1 {
 }
 
 .columna {
-  border: 1px solid #e3004f;
+  border: 1px solid #54595F;
   background-color: #f7f5f1;
 }
 
-.cabezeraColumna {
+.columna:hover {
+  border: 3px solid #e3004f;
+  border-radius: 3%;
+}
+.columna:hover .cabezeraColumna {
   background-color: #e3004f;
   color: white;
-  padding: 10px;
+  border-radius: 2.5%;
+}
+
+.cabezeraColumna {
+  background-color: #54595F;
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 0.007%;
   text-align: center;
+}
+
+.sin {
+  margin: 0 !important;
+  padding: 0 !important;
 }/*# sourceMappingURL=style.css.map */

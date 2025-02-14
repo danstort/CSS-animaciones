@@ -1,19 +1,44 @@
-h1{
+@import 'variables';
+
+h1 {
 
     color: red;
 }
 
-.columna{
+.columna {
 
-    border: 1px solid #e3004f;
+    border: 1px solid $color_2;
     background-color: #f7f5f1;
-    
+
 }
 
-.cabezeraColumna{
+.columna:hover {
 
-    background-color: #e3004f;
+    border: 3px solid #e3004f;
+    border-radius: 3%;
+
+    .cabezeraColumna {
+        background-color: #e3004f;
+        color: white;
+        border-radius: 2.5%;
+
+    }
+
+}
+
+.cabezeraColumna {
+
+    background-color: $color_2;
     color: white;
-    padding: 10px;
+    padding-top: 1%;
+    padding-bottom: 0.007%;
+    
     text-align: center;
+}
+
+.sin{
+
+    margin: 0 !important;
+    padding: 0 !important;
+    
 }
