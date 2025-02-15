@@ -3,12 +3,12 @@ h1 {
 }
 
 .columna {
-  background-color: #f7f5f1;
+  background-color: f7f5f1;
   animation: columnaBack 0.5s forwards;
 }
 
 .columna:hover {
-  animation: ani1 0.5s forwards;
+  animation: columnaGo 0.5s forwards;
 }
 
 .cabezeraColumna {
@@ -21,6 +21,10 @@ h1 {
   padding-bottom: 4%;
 }
 
+.columna:hover .cabezeraColumna {
+  animation: ani2 0.5s forwards;
+}
+
 .sin {
   margin: 0 !important;
   padding: 0 !important;
@@ -28,6 +32,10 @@ h1 {
 
 ul li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .boton {
@@ -42,9 +50,19 @@ ul li {
 }
 .boton:hover {
   background-color: #e3004f;
+  animation: botonGo 0.7s forwards;
 }
 
-@keyframes ani1 {
+.parrafoColumna {
+  background-color: #54595F;
+}
+
+.listaDiv {
+  padding-top: 10%;
+  padding-bottom: 12%;
+}
+
+@keyframes columnaGo {
   0% {
     border: 1px solid #54595F;
     border-radius: 0;
@@ -64,10 +82,6 @@ ul li {
     border-radius: 0;
   }
 }
-.columna:hover .cabezeraColumna {
-  animation: ani2 0.5s forwards;
-}
-
 @keyframes ani2 {
   0% {
     background-color: #54595F;
@@ -78,5 +92,32 @@ ul li {
     background-color: #e3004f;
     color: white;
     border-radius: 2.5%;
+  }
+}
+@keyframes botonGo {
+  0% {
+    scale: 1;
+    opacity: 0.5;
+    transform: rotate(0deg);
+  }
+  25% {
+    scale: 1.1;
+    opacity: 1;
+    transform: rotate(8deg) translateX(10px);
+  }
+  50% {
+    scale: 1.1;
+    opacity: 1;
+    transform: rotate(0deg) translateX(0px);
+  }
+  75% {
+    scale: 1.1;
+    opacity: 1;
+    transform: rotate(-8deg) translateX(-10px);
+  }
+  100% {
+    scale: 1;
+    opacity: 0.5;
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
