@@ -1,9 +1,10 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+h1, h2, h3, h4, p {
+  font-family: "Manrope", serif;
 }
 
 .columna {
-  background-color: f7f5f1;
+  background-color: #f7f5f1;
   animation: columnaBack 0.5s forwards;
 }
 
@@ -23,6 +24,12 @@ h1 {
 
 .columna:hover .cabezeraColumna {
   animation: ani2 0.5s forwards;
+}
+
+.precioDiv {
+  padding-top: 1%;
+  text-align: center;
+  color: #54595F;
 }
 
 .sin {
@@ -54,12 +61,17 @@ a {
 }
 
 .parrafoColumna {
-  background-color: #54595F;
+  padding-left: 22%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.parrafoColumna:hover {
+  animation: parrafoColumna 0.5s forwards;
 }
 
 .listaDiv {
-  padding-top: 10%;
-  padding-bottom: 12%;
+  padding-top: 5%;
+  padding-bottom: 8%;
 }
 
 @keyframes columnaGo {
@@ -119,5 +131,25 @@ a {
     scale: 1;
     opacity: 0.5;
     transform: rotate(0deg);
+  }
+}
+@keyframes parrafoColumna {
+  0% {
+    background-color: #f7f5f1;
+    color: #54595F;
+    transform: scaleY(1);
+  }
+  50% {
+    background-color: #e3004f;
+    color: white;
+    transform: scaleY(1.05);
+    font-weight: bold;
+    opacity: 0.5;
+  }
+  100% {
+    background-color: #e3004f;
+    color: white;
+    transform: scaleY(1.1);
+    font-weight: bolder;
   }
 }/*# sourceMappingURL=style.css.map */
