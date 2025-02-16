@@ -6,6 +6,20 @@ h1, h2, h3, h4, p {
     font-family: "Manrope", serif;
 }
 
+.tituloH1{
+    color: $color_1;
+    font-weight: bolder;
+    animation: textoH1 2s forwards;
+    margin: 0 !important;
+    
+}
+.tituloH2{
+    color: $color_2;
+    font-weight: bolder;
+    animation: textoH2 2s forwards;
+    margin: 0 0 2% 0 !important;
+    
+}
 .columna {
     
     background-color: $color_fondo;
@@ -25,10 +39,13 @@ h1, h2, h3, h4, p {
     p {
         padding-bottom: 4%;
     }
+
+    .cabezeraColumna{
+        animation: cabezeraBack 0.5s forwards;}
 }
 
 .columna:hover .cabezeraColumna {
-    animation: ani2 0.5s forwards;
+    animation: cabeceraGo 0.5s forwards;
 }
 
 .precioDiv{
@@ -75,6 +92,7 @@ a{
     padding-left: 22%;
     padding-top: 3%;
     padding-bottom: 3%;
+    
     &:hover {
         animation: parrafoColumna 0.5s forwards;
     }
@@ -83,6 +101,13 @@ a{
 .listaDiv{
     padding-top: 5%;
     padding-bottom: 8%;
+}
+
+.precioTexto{
+    animation: precioBack 0.5s forwards;
+    &:hover {
+        animation: precioGo 0.5s forwards;
+    }
 }
 
 @keyframes columnaGo {
@@ -109,7 +134,7 @@ a{
 
 
 
-@keyframes ani2 {
+@keyframes cabeceraGo {
     0% {
         background-color: $color_2;
         color: white;
@@ -119,6 +144,19 @@ a{
         background-color: $color_1;
         color: white;
         border-radius: 2.5%;
+    }
+}
+
+@keyframes cabezeraBack {
+    0% {
+        background-color: $color_1;
+        color: white;
+        border-radius: 2.5%;
+    }
+    100% {
+        background-color: $color_2;
+        color: white;
+        border-radius: 0;
     }
 }
 
@@ -172,4 +210,67 @@ a{
         font-weight: bolder;
     }
     
+}
+
+
+
+@keyframes precioGo {
+    0% {
+        color: $color_2;
+        transform: scale(1);
+    }
+    50% {
+        color: $color_1;
+        transform: scale(1.05);
+        font-weight: bold;
+        opacity: 0.5;
+    }
+    100% {
+        color: $color_1;
+        transform: scale(1.1);
+        font-weight: bolder;
+    }
+    
+}
+
+@keyframes precioBack {
+    0% {
+        color: $color_1;
+        transform: scale(1.1);
+    }
+    100% {
+        color: $color_2;
+        transform: scale(1);
+    }
+    
+} 
+
+@keyframes textoH1 {
+    0% {
+        
+        transform: scale(1) translateX(-1000px);
+    }
+    85% {
+        
+        transform: scale(1.1) translateX(20px);
+    }
+    100% {
+        
+        transform: scale(1.1) translateX(0px);
+    }
+}
+
+@keyframes textoH2 {
+    0% {
+        
+        transform: scale(1) translateX(1000px);
+    }
+    85% {
+        
+        transform: scale(1.1) translateX(-20px);
+    }
+    100% {
+        
+        transform: scale(1.1) translateX(0px);
+    }
 }
